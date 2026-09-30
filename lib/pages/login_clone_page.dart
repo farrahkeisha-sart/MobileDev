@@ -75,7 +75,7 @@ class LoginCloneFix extends StatelessWidget {
                     onPressed: () {},
                     icon: const Icon(
                       Icons.facebook,
-                      color: Color(0xFF1683F5),
+                      color: Color.fromARGB(255, 86, 54, 10),
                       size: 22,
                     ),
                     label: const Text(

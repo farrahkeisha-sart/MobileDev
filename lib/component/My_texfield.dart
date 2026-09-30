@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+
 
 class MyTextField extends StatelessWidget {
   //list variabel yang akan digunakan untuk menampung data input dari user
@@ -13,7 +13,6 @@ class MyTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       controller: textController,
-      inputFormatters: [FilteringTextInputFormatter.digitsOnly],
        //untuk menampilkan keyboard angka
       decoration: InputDecoration(
         hint: Text(myhint),

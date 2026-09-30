@@ -1,6 +1,6 @@
+import 'package:belajarfluuter/Routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:belajarfluuter/kalkulator_page.dart';
 
 
 void main() {
@@ -13,7 +13,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      home: KalkulatorPage(),
+     title: "Belajar Flutter ",
+     initialRoute: Routes.registration,
+     getPages: Routes.myPages,
     );
   }
 }
