@@ -4,11 +4,11 @@ import 'package:get/get.dart';
 import 'package:get/state_manager.dart';
 
 class ConfrimRegisterController extends GetxController{
-late String nama;
+
 late String email;
 late String alamat;
 late String kelamin;
-late String no;
+late String no;late String nama;
 
 @override
   void onInit() {
