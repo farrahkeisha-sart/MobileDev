@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:belajarfluuter/component/instagram_text_field.dart';
 import 'package:belajarfluuter/component/instagram_button.dart';
 import 'package:get/get.dart';
 import 'package:belajarfluuter/controller/login_clone_conttroller.dart';
@@ -12,7 +11,6 @@ class LoginCloneFix extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:AppBar(title: Text("Login API")),
       backgroundColor: const Color(0xFF1C1C1E),
       body: Center(
         child: SingleChildScrollView(
@@ -76,8 +74,7 @@ class LoginCloneFix extends StatelessWidget {
                 const SizedBox(height: 30),
 
              Obx(
-              () => controller.isLoading.value 
-              ? Center(child: CircularProgressIndicator()) : InstagramButton(
+              () => controller.isLoading.value ? Center(child: CircularProgressIndicator()) : InstagramButton(
               text: 'Log in',
               onPressed: () {
               controller.login();

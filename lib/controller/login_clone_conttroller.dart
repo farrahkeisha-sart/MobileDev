@@ -1,8 +1,8 @@
+import 'package:belajarfluuter/Routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:belajarfluuter/pages/menu_drawer_page.dart';
 
 class LoginCloneController extends GetxController {
   TextEditingController txtUsername = TextEditingController();
@@ -27,8 +27,8 @@ class LoginCloneController extends GetxController {
           final data = jsonDecode(response.body);
           if(data['status']== true){
             Get.snackbar("Berhasil", data['message']);
-            //pindah ke mainmenu
-          Get.off(()=> MenuDrawerPage());
+            //pindah ke main menu
+          Get.offNamed(Routes.menuDrawer);
           }else{
             Get.snackbar("Gagal", data['message']);
           }
