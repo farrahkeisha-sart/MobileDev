@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
      title: "Belajar Flutter ",
-     initialRoute: Routes.listProduk,
+     initialRoute: Routes.loginClone,
      getPages: Routes.myPages,
     );
   }

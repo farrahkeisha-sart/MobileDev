@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:belajarfluuter/component/instagram_text_field.dart';
 import 'package:belajarfluuter/component/instagram_button.dart';
+import 'package:get/get.dart';
+import 'package:belajarfluuter/controller/login_clone_conttroller.dart';
+
 
 class LoginCloneFix extends StatelessWidget {
-  const LoginCloneFix({super.key});
+   LoginCloneFix({super.key});
+  final controller = Get.put(LoginCloneController());
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar:AppBar(title: Text("Login API")),
       backgroundColor: const Color(0xFF1C1C1E),
       body: Center(
         child: SingleChildScrollView(
@@ -32,26 +37,53 @@ class LoginCloneFix extends StatelessWidget {
                 const SizedBox(height: 32),
 
                 // Username
-                const InstagramTextField(
-                  hintText: 'Mobile number, username or email',
+                TextField(
+                  controller: controller.txtUsername,
+                  decoration: InputDecoration(
+                    hintText: 'Mobile number, username or email',
+                    hintStyle: TextStyle(color: Colors.white54),
+                    filled: true,
+                    fillColor: Color(0xFF292A2D),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30),
+                      borderSide: BorderSide.none,
+                    ),
+                  ),
+                  style: TextStyle(color: Colors.white),
                 ),
+                
 
                 const SizedBox(height: 15),
 
-                // Password
-                const InstagramTextField(
-                  hintText: 'Password',
+                TextField(
+                  controller: controller.txtPassword,
                   obscureText: true,
+                  decoration: InputDecoration(
+                    hintText: 'Password',
+                    hintStyle: TextStyle(color: Colors.white54),
+                    filled: true,
+                    fillColor: Color(0xFF292A2D),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30),
+                      borderSide: BorderSide.none,
+                    ),
+                  ),
+                  style: TextStyle(color: Colors.white),
                 ),
+
+              
 
                 const SizedBox(height: 30),
 
-                // Tombol Login
-                InstagramButton(
-                  text: 'Log in',
-                  onPressed: () {},
-                ),
-
+             Obx(
+              () => controller.isLoading.value 
+              ? Center(child: CircularProgressIndicator()) : InstagramButton(
+              text: 'Log in',
+              onPressed: () {
+              controller.login();
+             },
+            ),),
+            
                 const SizedBox(height: 30),
 
                 // Forgot password
