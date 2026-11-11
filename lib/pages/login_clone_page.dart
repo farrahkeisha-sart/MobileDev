@@ -22,7 +22,6 @@ class LoginCloneFix extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,//menyusun widget secara vertikal
               children: [
-                // Judul
                 const Text(
                   'Log into Instagram',
                   style: TextStyle(
@@ -34,7 +33,6 @@ class LoginCloneFix extends StatelessWidget {
 
                 const SizedBox(height: 32),
 
-                // Username
                 TextField(
                   controller: controller.txtUsername,
                   decoration: InputDecoration(
@@ -96,8 +94,6 @@ class LoginCloneFix extends StatelessWidget {
                 ),
 
                 const SizedBox(height: 80),
-
-                // Login Facebook
                 SizedBox(
                   height: 55,
                   child: ElevatedButton.icon(
@@ -125,8 +121,6 @@ class LoginCloneFix extends StatelessWidget {
                 ),
 
                 const SizedBox(height: 16),
-
-                // Create account
                 InstagramButton(
                   text: 'Create new account',
                   isOutline: true,
@@ -135,7 +129,6 @@ class LoginCloneFix extends StatelessWidget {
 
                 const SizedBox(height: 30),
 
-                // Meta
                 const Center(
                   child: Text(
                     '∞ Meta',

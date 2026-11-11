@@ -8,6 +8,7 @@ import 'package:belajarfluuter/menu/home.dart';
 import 'package:belajarfluuter/menu/profile.dart';
 import 'package:get/get.dart';
 import 'package:belajarfluuter/pages/login_clone_page.dart';
+import 'package:belajarfluuter/pages/list_product_api_page.dart';
 
 class Routes {
   static const String registration = "/registration";
@@ -19,6 +20,7 @@ class Routes {
   static const String menuProfile = "/menuProfile";
   static const String menuDrawer = "/drawer";
   static const String loginClone = "/loginClonePage";
+  static const String listProductApi = "/listProductApi";
  
 
   //masukan ke aray
@@ -32,5 +34,6 @@ class Routes {
     GetPage(name: menuDrawer,page: () => MenuDrawerPage(),),
     GetPage(name: menuProfile,page: () => ProfilePage(),),
     GetPage(name: loginClone,page: () => LoginCloneFix(),),
+    GetPage(name: listProductApi,page: () => ListProductApiView(),),
   ];
 }
